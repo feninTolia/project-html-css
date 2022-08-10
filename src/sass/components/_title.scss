@@ -1,0 +1,9 @@
+.title {
+  @include font(700, 28px, 33px);
+
+  @include for-tablet-up {
+    @include font(700, 42px, 49px);
+  }
+}
+
+// для тайтла героя потрібні інші розміри

@@ -1,0 +1,46 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, noto, arial,
+    sans-serif;
+  background-color: var(--white-main-color);
+  color: var(--primary-text-color);
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}

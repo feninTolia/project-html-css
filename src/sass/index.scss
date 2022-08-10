@@ -1,0 +1,21 @@
+@import './utils/mixins';
+@import './utils/placeholder';
+@import './utils/variables';
+@import './utils/visually-hidden';
+
+@import './base/common';
+@import './base/container';
+@import './base/section';
+
+@import './components/backdrop';
+@import './components/modal-form';
+@import './components/modal-window';
+@import './components/title';
+
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/offerings';
+@import './layouts/favorites';
+@import './layouts/customers-say';
+@import './layouts/subcribe';
+@import './layouts/footer';

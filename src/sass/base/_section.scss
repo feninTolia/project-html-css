@@ -1,0 +1,7 @@
+.section {
+  padding: 60px 0;
+
+  @include for-tablet-up {
+    padding: 100px 0;
+  }
+}
