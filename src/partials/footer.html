@@ -1,29 +1,30 @@
 <footer class="page-footer">
     <div class="page-footer__wrapper container">
         <div class="navigation-footer">
-            <a href="#" class="logo__footer">
+            <a href="./index.html" class="logo__footer link">
                 <svg class="logo__footer-icon">
-                    <use></use>
+                    <use href="./images/sprite.svg#logo-footer"></use>
                 </svg>
             </a>
-            <ul class="navigation-footer__list">
-                <li class="navigation-footer__item"><a href="" class="navigation-footer_link">Home</a></li>
-                <li class="navigation-footer__item"><a href="" class="navigation-footer_link">About</a></li>
-                <li class="navigation-footer__item"><a href="" class="navigation-footer_link">Service</a></li>
-                <li class="navigation-footer__item"><a href="" class="navigation-footer_link">Menu</a></li>
-                <li class="navigation-footer__item"><a href="" class="navigation-footer_link">Contact</a></li>
+            <ul class="navigation-footer__list list">
+                <li class="navigation-footer__item"><a href="./index.html" class="navigation-footer_link link">Home</a></li>
+                <li class="navigation-footer__item"><a href="" class="navigation-footer_link link">About</a></li>
+                <li class="navigation-footer__item"><a href="" class="navigation-footer_link link">Service</a></li>
+                <li class="navigation-footer__item"><a href="" class="navigation-footer_link link">Menu</a></li>
+                <li class="navigation-footer__item"><a href="" class="navigation-footer_link link">Contact</a></li>
             </ul>
         </div>
         <form class="subscribe-footer">
-            <p class="subscribe-footer__title">Subscribe</p>
+            <b class="subscribe-footer__title">Subscribe</b>
             <label class="subscribe-footer__field">
-                <input type="email" name="user_email" placeholder="Enter your email" class="subscribe-footer__input" required>
+                <input type="email" name="user_email" placeholder="Enter your email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="subscribe-footer__input">
                 <button type="submit" class="subscribe-footer__button">Subscribe</button>
                 <p class="subscribe-footer__desc">By subscribing you agree to with our<a class="subscribe-footer_policy-link"
                         href="#">Privacy Policy</a></p>
             </label>
         </form>
-        <ul class="user-policy__list">
+        <ul class="user-policy__list list">
             <li class="user-policy__item"><a href="#" class="user-policy__link">Privacy Policy</a></li>
             <li class="user-policy__item"><a href="#" class="user-policy__link">Terms of Service</a></li>
             <li class="user-policy__item"><a href="#" class="user-policy__link">Cookies Settings</a></li>
