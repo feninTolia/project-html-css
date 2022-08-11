@@ -65,12 +65,17 @@
   margin-left: auto;
 }
 
-.customers-rating__item {
+.customers-rating__list {
   display: flex;
   margin-bottom: 28px;
 }
 .star {
   fill: var(--yellow-main-color);
+}
+.star__item {
+  &:not(:last-child) {
+    margin-right: 2px;
+  }
 }
 .customer-card {
   display: flex;
