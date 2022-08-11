@@ -1,0 +1,70 @@
+.container {
+
+    @include for-tablet-up {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}
+
+
+.hero__order-button {
+    @include font(null, 14px, 20px);
+    border: 0;
+    border-radius: 30px;
+    padding: 6px 18px;
+    background-color: var(--green-background);
+    color: var(--primary-text-color);
+    margin-bottom: 61px;
+    transition: background-color var(--timing-function);
+
+    &:hover,
+    &:focus {
+        background-color: #B5FF00;
+    }
+}
+
+
+
+.hero__image {
+    @media screen and (max-width:769px) {
+        display: none;
+    }
+
+    @media screen and (min-width:768px) {
+        margin-left: 40px;
+        border: 14px solid var(--yellow-main-color);
+        border-radius: 50%;
+    
+    }
+
+}
+
+
+.hero__title {
+    @include font(null, 28px, 32.81px);
+    margin-bottom: 44px;
+
+
+    @media screen and (min-width:768px) {
+        @include font(null, 42px, 50.4px);
+
+    }
+}
+
+
+
+.hero__description {
+    @include font(null, 14px, 21px);
+    margin-bottom: 40px;
+    max-width: 400px;
+
+
+    @media screen and (min-width:768px) {
+        @include font(null, 16px, 24px);
+        width: 336px;
+
+    }
+
+
+}
