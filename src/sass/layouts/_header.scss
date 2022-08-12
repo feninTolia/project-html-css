@@ -32,11 +32,17 @@
 
 }
 
+
+
 .navigation-menu__list{
+    display: none;
+    @include for-tablet-up{
     display: flex;
     gap: 28px;
     justify-content: flex-end;
     margin-right: 28px;
+    }
+    
 }
 
 .navigation-menu__link{
@@ -49,7 +55,9 @@
     }
 }
 .page-header__order-btn{
-   display: flex;
+    display: none;
+    @include for-tablet-up{
+    display: flex;
     padding: 7px 17px;
     background-color: var(--green-background);
     border: transparent;
@@ -59,70 +67,72 @@
     &:hover,
     &:focus{
         background-color: #B5FF00;
+        }
+    }
+    
+}
+
+
+
+
+@include for-tablet-up{
+    .mobile-menu{
+        display: none;
     }
 }
+
+
 .mobile-menu {
-    position: relative;
+        position: relative;
 
-    @include for-tablet-up{
-        display: none;
+    }
+   
+
+.mobile-menu__list {
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    width: 130px;
+    height: 255px;
+    z-index: 100;
+    opacity: 0;
+    background-color: var(--white-main-color);
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity var(--timing-function),
+                visibility var( --timing-function);
+
+
+}
+.mobile-menu__item {
+    padding: 16px 10px 16px 16px;
+    transition: background-color var(--timing-function);
+    &:first-child{
+        border-top-left-radius: 30px;
+    }
+    &:last-child{
+        border-radius: 0 0 30px 30px;
+    }
+    
+    &:hover{
+        background-color: var(--green-background);
     }
 }
 
-
-@include for-phone-only{
-    .navigation-menu{
-        display: none;
-    }
-    .page-header__order-btn{
-        display: none;
-    }
-
-    .mobile-menu__list {
-        position: absolute;
-        top: 100%;
-        right: 20px;
-        width: 130px;
-        height: 255px;
-        z-index: 100;
-        opacity: 0;
-        background-color: var(--white-main-color);
-        border-radius: 30px;
-        border-top-right-radius: 0;
-        box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
-        visibility: hidden;
-        pointer-events: none;
-        transition: opacity var(--timing-function),
-                    visibility var( --timing-function);
-    
-
-    }
-    .mobile-menu__item {
-        padding: 16px 10px 16px 16px;
-        transition: background-color var(--timing-function);
-        &:first-child{
-            border-top-left-radius: 30px;
-        }
-        &:last-child{
-            border-radius: 0 0 30px 30px;
-        }
-       
-        &:hover{
-            background-color: var(--green-background);
-        }
-    }
-    
-    .mobile-menu__link{
-        color: var(--secondary-text-color);
-        @include font (400, 16px, 19px)
-    }
-
-    .mobile-menu__list.is-open {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-    }
+.mobile-menu__link{
+    color: var(--secondary-text-color);
+    @include font (400, 16px, 19px)
 }
+
+.mobile-menu__list.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
 
 
 
@@ -134,6 +144,7 @@
         display: none;
     }
 }
+
 .mobile-menu__burger-icon{
     width: 28px;
     height: 28px;
