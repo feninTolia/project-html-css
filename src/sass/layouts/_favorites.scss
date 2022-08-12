@@ -55,10 +55,6 @@
     }
       
 }
-@include for-phone-up{
-   
-    
-}
 @include for-phone-only {
     .favorites__item:nth-last-child(-n + 3) {
             display: none;
@@ -99,7 +95,8 @@
 }
 @include for-tablet-only{
     .favorites{
-        padding: 141px 0;
+        padding-top: 100px;
+        padding-bottom: 141px;
     }
     .favorites__link {
             width: 336px;
