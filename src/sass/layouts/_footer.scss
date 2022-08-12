@@ -1,12 +1,26 @@
 .page-footer{
     box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
-    @include for-phone-only{
+   
         background-image:
                 url(../images/order-mob-img/bg-apple-footer-mob.png),
                 url(../images/order-mob-img/bg-orange-footer-mob.png),
                 url(../images/order-mob-img/bg-footer-bottom-mob.png);
             background-position: 0 132px, top right, bottom;
             background-repeat: no-repeat;
+    
+    @include for-tablet-up{
+        background-image:
+        url(../images/order-mob-img/bg-footer-bottom-mob.png),
+        url(../images/order-tab-img/apple-for-footer.png ),
+        url(../images/order-tab-img/orange-for-footer.png ),
+        url(../images/order-mob-img/bg-orange-footer-mob.png);
+        background-position: bottom, bottom right, bottom left, top right;
+        background-repeat: no-repeat;
+    }
+    @include for-desktop-up {
+        background-image: url(../images/order-desc-img/bg-desc-footer.png);
+        background-position: bottom;
+        background-repeat:no-repeat;
     }
 }
 .page-footer__wrapper{
@@ -21,12 +35,19 @@
 .navigation-footer{
     display: flex;
     margin-bottom: 40px;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
 
 }
 
 .navigation-footer__list{
     margin-left: auto;
     margin-right: auto;
+    @include for-tablet-up {
+        display: flex;
+        gap: 28px;
+    }
 
 }
 .navigation-footer__item:not(:last-child){
@@ -35,12 +56,21 @@
 .navigation-footer_link{
     color: var(--secondary-text-color);
     @include font (400, 14px, 16px);
+    color: var(--primary-text-color);
+    transition: color var(--timing-function);
+    &:hover,
+    &:focus{
+        color: var(--accent-color);
+    }
      
 }
 
 .subscribe-footer{
     display: block;
     margin-bottom: 60px;
+    @include for-tablet-up{
+        min-width: 450px;
+    }
 }
 .subscribe-footer__title{
     display: block;
@@ -48,6 +78,12 @@
     @include font (600, 14px, 21px)
 }
 .subscribe-footer__field{
+    @include for-tablet-up{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        max-width: 420px;
+    }
 
 }
 
@@ -65,11 +101,19 @@
     &:invalid {
         border-color: #FF705D;
     }
+    @include for-tablet-up{
+        display: flex;
+        max-width: 280px;
+        margin-right: 14px;
+        margin-bottom: 12px;
+    }
 
 }
 
 .subscribe-footer__button{
     display: block;
+    width: 102px;
+    height: 42px;
     padding: 10px 20px;
     margin-left: auto;
     margin-bottom: 20px;
@@ -78,6 +122,10 @@
     color: var(--primary-text-color);
     border-radius: 30px;
     background-color: var(--white-main-color);
+    @include for-tablet-up {
+            display: flex;
+            margin-left: 0;
+        }
 }
 
 .subscribe-footer__desc{
@@ -85,6 +133,15 @@
 }
 .subscribe-footer_policy-link{
     color: var(--accent-color);
+}
+.user-policy__wrapper{
+    @include for-tablet-up{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+}
+   
 }
 .user-policy__list{
     display: flex;
