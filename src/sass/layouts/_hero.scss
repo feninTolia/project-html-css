@@ -1,4 +1,5 @@
 .hero__section {
+    
     @include for-tablet-up {
         padding-top:60px;
         padding-bottom: 60px;  
@@ -87,8 +88,8 @@
 
 
 .hero__title {
-    @include font(null, 28px, 32.81px);
-    margin-bottom: 44px;
+    @include font(null, 27px, 32.81px);
+    margin-bottom: 28px;
 
 
     @media screen and (min-width:768px) {
@@ -108,7 +109,6 @@
 .hero__description {
     @include font(null, 14px, 21px);
     margin-bottom: 40px;
-    max-width: 400px;
 
 
     @include for-tablet-up {
