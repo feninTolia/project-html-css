@@ -1,18 +1,18 @@
 .favorites{
+    text-align: center;
     padding: 60px 0;
     background-color: var(--white-main-color);
 }
 .favorites__title{
-    text-align: center;
-    
+    display: block;
+    width: 100%;
+   
 }
 .favorites__subtitle{
+    width: 100%;
     margin-top: 20px;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
     @include font(400, 14px, 16.41px);
-   
+       
 }
 .favorites__list{
     align-items: center;
@@ -70,8 +70,9 @@
     
         }
     .favorites__subtitle{
-        text-align: center;
-        width: 280px;
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
     }
     .favorites__title{
         max-width: 280px;
@@ -89,9 +90,11 @@
         gap: 32px;
     }
         .favorites__subtitle {
+            text-align: center;
             @include font(400, 16px, 18.75px);
     
-        }  
+        } 
+       
 }
 @include for-tablet-only{
     .favorites{
@@ -106,14 +109,14 @@
 }
 @include for-desktop-up{
     .favorites {
-            padding: 100px 0;
+        padding: 100px 0;
+    }
+        .favorites__list{
+             margin-top: 40px;
         }
-                .favorites__list{
-                    margin-top: 40px;
-                }
-                .favorites__link {
-                    width: 394px;
-                    height: 397px;
-                }
+            .favorites__link {
+                width: 394px;
+                height: 397px;
+            }
 
 }
