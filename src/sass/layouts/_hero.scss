@@ -1,24 +1,35 @@
+.hero__section {
+    @include for-tablet-up {
+        padding-top:60px;
+        padding-bottom: 60px;  
+    }
+
+
+
+    @include for-desktop-up {
+        padding-top: 18px;
+        padding-bottom: 18pxnom;
+    }
+}
+
+
+.hero__wrapper {
+    @include for-desktop-up{
+    margin-top: 145px;
+    }
+}
+
+
 .container {
 
     @include for-tablet-up {
-        // display: flex;
-        // flex-direction: row;
         position: relative
     }
 
     @include for-desktop-up {
         display: flex;
         flex-wrap: wrap;
-
-
     }
-
-
-
-    // @include for-desktop-up {
-    //     display: flex;
-
-    // }
 
 }
 
@@ -26,21 +37,20 @@
 .hero-picture {
     @include for-tablet-up {
         position: absolute;
-        width: 320px;
         margin-left: 40px;
+        top: 90px;
+        left: 369px;
     }
 
 
     @include for-desktop-up {
-        position: static
+        position: static;
+        margin-left: auto;
+        margin-right: 15px;
     }
 
 }
 
-
-// .hero__container {
-//     position: relative
-// }
 
 
 .hero__order-button {
@@ -62,15 +72,12 @@
 
 
 .hero__image {
-    @media screen and (max-width:769px) {
+    @media screen and (max-width:767px) {
         display: none;
 
     }
 
     @include for-tablet-up {
-        // top: 86px;
-        // left: 368px;
-        width: 520px;
         border: 14px solid var(--yellow-main-color);
         border-radius: 50%;
 
@@ -95,9 +102,7 @@
         width: 503px
     }
 
-
 }
-
 
 
 .hero__description {
