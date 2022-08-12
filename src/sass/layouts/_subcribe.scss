@@ -1,8 +1,12 @@
+.subscribe__box {
+  display: block;
+}
+
 .subscribe__img {
   width: 160px;
   height: 78px;
 
-  margin-top: -105px;
+  margin-top: -106px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 16px;
@@ -16,13 +20,19 @@
     width: 280px;
     height: 136px;
 
-    margin: -130px 0 16px auto;
+    margin-top: -190px;
+    margin-right: auto;
+    margin-left: 424px;
+    margin-bottom: 20px;
   }
 
   @include for-desktop-up {
-    width: 546px;
-    height: 226px;
-    margin: 0 0 -190px auto;
+    width: 540px;
+    height: 260px;
+    margin-top: -166px;
+    margin-right: 0;
+    margin-left: auto;
+    margin-bottom: -184px;
   }
 }
 
@@ -36,6 +46,10 @@
 
   @include for-tablet-up {
     @include font(700, 42px, 50px);
+
+    @include for-desktop-up {
+      width: 630px;
+    }
   }
 }
 
@@ -51,7 +65,7 @@
   }
 
   @include for-desktop-up {
-    width: 650px;
+    width: 630px;
     margin-bottom: 24px;
   }
 }
@@ -62,7 +76,6 @@
   align-items: flex-end;
 
   @include for-tablet-up {
-    display: flex;
     flex-direction: row;
     align-items: center;
   }
@@ -122,5 +135,9 @@
 
   @include for-tablet-up {
     margin-left: 20px;
+  }
+
+  @include for-desktop-up {
+    margin-left: 32px;
   }
 }
