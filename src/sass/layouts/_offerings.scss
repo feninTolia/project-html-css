@@ -8,16 +8,18 @@
 
   @include for-tablet-up {
     background-image: url(../images/oferring-graphic/offer-bg-tab.svg);
+    margin-top: -33px;
   }
 
   @include for-desktop-up {
     background-image: url(../images/oferring-graphic/bg-desk-xxl.svg);
+    margin-top: -146px;
   }
 
   @media screen and(min-width:1700px) {
-    background-image: url(../images/oferring-graphic/bg-desk-blob3.svg);
-    background-position: top;
-    background-size: contain;
+    background-image: url(../images/oferring-graphic/bg-desk-blob-7.svg);
+    background-position: bottom;
+    background-size: auto 90%;
   }
 }
 

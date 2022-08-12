@@ -1,124 +1,114 @@
 .hero__section {
-    @include for-tablet-up {
-        padding-top:60px;
-        padding-bottom: 60px;  
-    }
+  padding-bottom: 0;
 
+  @include for-tablet-up {
+    padding-top: 60px;
+  }
 
-
-    @include for-desktop-up {
-        padding-top: 18px;
-        padding-bottom: 18pxnom;
-    }
+  @include for-desktop-up {
+    padding-top: 18px;
+  }
 }
-
 
 .hero__wrapper {
-    @include for-desktop-up{
+  @include for-desktop-up {
     margin-top: 145px;
-    }
+  }
 }
-
 
 .container {
+  @include for-tablet-up {
+    position: relative;
+  }
 
-    @include for-tablet-up {
-        position: relative
-    }
-
-    @include for-desktop-up {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
+  @include for-desktop-up {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
-
 
 .hero-picture {
-    @include for-tablet-up {
-        position: absolute;
-        margin-left: 40px;
-        top: 90px;
-        left: 369px;
-    }
+  @include for-tablet-up {
+    position: absolute;
+    margin-left: 40px;
+    top: 90px;
+    left: 369px;
+  }
 
-
-    @include for-desktop-up {
-        position: static;
-        margin-left: auto;
-        margin-right: 15px;
-    }
-
+  @include for-desktop-up {
+    position: static;
+    margin-left: auto;
+  }
 }
-
-
 
 .hero__order-button {
-    @include font(null, 14px, 20px);
-    border: 0;
-    border-radius: 30px;
-    padding: 6px 18px;
-    background-color: var(--green-background);
-    color: var(--primary-text-color);
-    margin-bottom: 61px;
-    transition: background-color var(--timing-function);
+  @include for-phone-only {
+    margin-bottom: 50px;
+  }
+  @include font(null, 14px, 20px);
+  border: 0;
+  border-radius: 30px;
+  padding: 6px 18px;
+  background-color: var(--green-background);
+  color: var(--primary-text-color);
+  //   margin-bottom: 61px;
+  transition: background-color var(--timing-function);
 
-    &:hover,
-    &:focus {
-        background-color: #B5FF00;
-    }
+  &:hover,
+  &:focus {
+    background-color: #b5ff00;
+  }
+
+  @include for-tablet-only {
+    margin-bottom: 0;
+  }
 }
-
-
 
 .hero__image {
-    @media screen and (max-width:767px) {
-        display: none;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 
-    }
+  @include for-tablet-only {
+    width: 326px;
+  }
 
-    @include for-tablet-up {
-        border: 14px solid var(--yellow-main-color);
-        border-radius: 50%;
+  @include for-tablet-up {
+    border: 14px solid var(--yellow-main-color);
+    border-radius: 50%;
+  }
 
-    }
-
+  @include for-desktop-up {
+    width: 580px;
+  }
 }
-
 
 .hero__title {
-    @include font(null, 28px, 32.81px);
-    margin-bottom: 44px;
+  @include font(null, 28px, 32.81px);
+  margin-bottom: 44px;
 
+  @media screen and (min-width: 768px) {
+    @include font(null, 42px, 50.4px);
+    width: 537px;
+  }
 
-    @media screen and (min-width:768px) {
-        @include font(null, 42px, 50.4px);
-        width: 537px;
-
-    }
-
-    @include for-desktop-up {
-        @include font(null, 48px, 57.6px);
-        width: 503px
-    }
-
+  @include for-desktop-up {
+    @include font(null, 48px, 57.6px);
+    width: 503px;
+  }
 }
 
-
 .hero__description {
-    @include font(null, 14px, 21px);
-    margin-bottom: 40px;
-    max-width: 400px;
+  @include font(null, 14px, 21px);
+  margin-bottom: 40px;
+  max-width: 400px;
 
+  @include for-tablet-up {
+    @include font(null, 16px, 24px);
+    width: 336px;
+  }
 
-    @include for-tablet-up {
-        @include font(null, 16px, 24px);
-        width: 336px;
-    }
-
-    @include for-desktop-up {
-        min-width: 502px;
-    }
-
-
+  @include for-desktop-up {
+    min-width: 502px;
+  }
 }
