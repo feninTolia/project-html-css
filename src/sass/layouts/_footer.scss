@@ -92,6 +92,7 @@
     margin-bottom: 12px;
     @include font (600, 14px, 21px)
 }
+
 .subscribe-footer__field{
     @include for-tablet-up{
         display: flex;
@@ -103,7 +104,7 @@
         max-width: 396px;
     }
 
-}
+
 
 .subscribe-footer__input{
     display: block;
@@ -116,7 +117,10 @@
     &:focus{
         outline: transparent;
     }
-    
+    &:valid{
+        border-color: #7EB101;
+
+    }
     &:invalid {
         border-color: #FF705D;
     }
@@ -128,10 +132,17 @@
     }
 
 }
+
 .subscribe-footer__input::placeholder{
     color: #505050;
     @include font (400, 12px, 18px);
 }
+
+.subscribe-footer__input:placeholder-shown {
+    border-color: var(--yellow-main-color);
+}
+
+
 
 .subscribe-footer__button{
     display: block;
