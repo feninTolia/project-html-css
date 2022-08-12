@@ -1,0 +1,119 @@
+.favorites{
+    padding: 60px 0;
+    background-color: var(--white-main-color);
+}
+.favorites__title{
+    text-align: center;
+    
+}
+.favorites__subtitle{
+    margin-top: 20px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    @include font(400, 14px, 16.41px);
+   
+}
+.favorites__list{
+    align-items: center;
+    margin-top: 60px;
+   
+}
+.favorites__item:nth-last-child(4){
+    margin-bottom: 0;   
+}
+.favorites__link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    border: 11px solid var(--yellow-main-color);
+    transition: border-color var(--timing-function);
+    
+}
+.favorites__link:hover,
+.favorites__link:focus{
+    border-color: var(--green-background);
+}
+.favorites__img{
+    transition: transform var(--timing-function);
+}
+.favorites__link:hover .favorites__img{
+    transform: rotate(5deg);
+}
+
+@include for-phone-responsive {
+    .favorites__link{
+        width: 280px;
+    }
+
+    .favorites__img {
+        width: 224px;
+
+    }
+      
+}
+@include for-phone-only {
+    .favorites__item:nth-last-child(-n + 3) {
+            display: none;
+        }
+
+        .favorites__link{
+            max-width: 280px;
+            height: 282px;
+        }
+    
+        .favorites__item {
+            margin-bottom: 20px;
+    
+        }
+    .favorites__subtitle{
+        text-align: center;
+        width: 280px;
+    }
+    .favorites__title{
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+        @include font(700, 28px, 32.81px);
+    }
+        
+}
+ @include for-tablet-up {
+    .favorites__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 32px;
+    }
+        .favorites__subtitle {
+            @include font(400, 16px, 18.75px);
+    
+        }  
+}
+@include for-tablet-only{
+    .favorites{
+        padding-top: 100px;
+        padding-bottom: 141px;
+    }
+    .favorites__link {
+            width: 336px;
+            height: 336px;
+    }
+        
+}
+@include for-desktop-up{
+    .favorites {
+            padding: 100px 0;
+        }
+                .favorites__list{
+                    margin-top: 40px;
+                }
+                .favorites__link {
+                    width: 394px;
+                    height: 397px;
+                }
+
+}
