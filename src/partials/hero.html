@@ -1,11 +1,50 @@
-<section class="section hero">
-  <div class="container">
-    <h1 class="hero__title">Enjoy Your Favorite Food From Anywhere</h1>
-    <p class="hero__description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-      varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-      ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-    </p>
-    <button class="hero__order-button" type="button">Order Now</button>
-    <img class="hero__image" src="./images/img-hero-tab/foto-1-tab.png" alt="food on the plate">
+<section class="section hero__section">
+  <div class="container hero__container">
+    <div class="hero__wrapper">
+      <h1 class="hero__title">Enjoy Your Favorite Food From Anywhere</h1>
+      <p class="hero__description">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </p>
+      <button class="hero__order-button" type="button">Order Now</button>
+    </div>
+    <picture class="hero-picture">
+      <source
+        srcset="
+          ./images/img-hero-desc/foto-1-desc.webp    1x,
+          ./images/img-hero-desc/foto-1-desc@x2.webp 2x
+        "
+        media="(min-width:1280px)"
+        type="image/webp"
+      />
+      <source
+        srcset="
+          ./images/img-hero-desc/foto-1-desc.png    1x,
+          ./images/img-hero-desc/foto-1-desc@x2.png 2x
+        "
+        media="(min-width:1280px)"
+      />
+      <source
+        srcset="
+          ./images/img-hero-tab/foto-1-tab.webp    1x,
+          ./images/img-hero-tab/foto-1-tab@x2.webp 2x
+        "
+        media="(min-width:768px)"
+        type="image/webp"
+      />
+      <source
+        srcset="
+          ./images/img-hero-tab/foto-1-tab.png    1x,
+          ./images/img-hero-tab/foto-1-tab@x2.png 2x
+        "
+        media="(min-width:768px)"
+      />
+      <img
+        class="hero__image"
+        src="./images/img-hero-tab/foto-1-tab.png"
+        alt="food on the plate"
+      />
+    </picture>
+  </div>
 </section>
