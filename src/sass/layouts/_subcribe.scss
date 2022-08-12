@@ -20,7 +20,9 @@
   }
 
   @include for-desktop-up {
-    width: 100%;
+    width: 546px;
+    height: 226px;
+    margin: 0 0 -190px auto;
   }
 }
 
@@ -47,6 +49,11 @@
   @include for-tablet-up {
     @include font(400, 16px, 24px);
   }
+
+  @include for-desktop-up {
+    width: 650px;
+    margin-bottom: 24px;
+  }
 }
 
 .subscribe__form {
@@ -58,7 +65,6 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    // align-items: flex-start;
   }
 }
 
@@ -71,9 +77,22 @@
   margin-bottom: 30px;
   padding: 12px;
 
-  background-color: var(--white-main-color);
   border: 0.854167px solid var(--yellow-main-color);
   border-radius: 30px;
+
+  &:focus {
+    outline: transparent;
+    caret-color: #505050;
+    color: var(--primary-text-color);
+  }
+
+  &:invalid {
+    border-color: #ff705d;
+  }
+
+  &:valid {
+    border-color: var(--accent-color);
+  }
 
   @include for-tablet-up {
     width: 400px;
@@ -81,12 +100,8 @@
   }
 }
 
-.subscribe__email:focus {
-  background-color: var(--white-main-color);
-  border: 0.854167px solid var(--accent-color);
-  caret-color: #505050;
-  color: var(--primary-text-color);
-  transition: background-color var(--white-main-color);
+.subscribe__email:placeholder-shown {
+  border-color: var(--yellow-main-color);
 }
 
 .subscribe__button {
@@ -98,15 +113,14 @@
 
   border-radius: 30px;
 
+  &:hover,
+  &:focus,
+  &:active {
+    background: var(--green-background);
+    transition: background-color var(--timing-function);
+  }
+
   @include for-tablet-up {
     margin-left: 20px;
   }
-}
-
-.subscribe__button:hover,
-.subscribe__button:focus,
-.subscribe__button:active {
-  align-self: flex-start;
-  background: var(--green-background);
-  transition: background-color var(--timing-function);
 }
