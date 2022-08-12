@@ -1,0 +1,103 @@
+.page-footer{
+    box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
+    @include for-phone-only{
+        background-image:
+                url(../images/order-mob-img/bg-apple-footer-mob.png),
+                url(../images/order-mob-img/bg-orange-footer-mob.png),
+                url(../images/order-mob-img/bg-footer-bottom-mob.png);
+            background-position: 0 132px, top right, bottom;
+            background-repeat: no-repeat;
+    }
+}
+.page-footer__wrapper{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.logo__footer-icon {
+    width: 69px;
+    height: 51px;
+}
+.navigation-footer{
+    display: flex;
+    margin-bottom: 40px;
+
+}
+
+.navigation-footer__list{
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.navigation-footer__item:not(:last-child){
+    margin-bottom: 20px;
+}
+.navigation-footer_link{
+    color: var(--secondary-text-color);
+    @include font (400, 14px, 16px);
+     
+}
+
+.subscribe-footer{
+    display: block;
+    margin-bottom: 60px;
+}
+.subscribe-footer__title{
+    display: block;
+    margin-bottom: 12px;
+    @include font (600, 14px, 21px)
+}
+.subscribe-footer__field{
+
+}
+
+.subscribe-footer__input{
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 30px;
+    border: 1px solid var(--yellow-main-color);
+    border-radius: 30px;
+    &:focus{
+        outline: transparent;
+    }
+    
+    &:invalid {
+        border-color: #FF705D;
+    }
+
+}
+
+.subscribe-footer__button{
+    display: block;
+    padding: 10px 20px;
+    margin-left: auto;
+    margin-bottom: 20px;
+    @include font (400, 14px, 21px);
+    border: 1px solid var(--accent-color);
+    color: var(--primary-text-color);
+    border-radius: 30px;
+    background-color: var(--white-main-color);
+}
+
+.subscribe-footer__desc{
+    @include font (400, 10px, 12px)
+}
+.subscribe-footer_policy-link{
+    color: var(--accent-color);
+}
+.user-policy__list{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    @include font (400, 10px, 12px)
+}
+.user-policy__link{
+    color: var(--accent-color);
+}
+
+.signature{
+    text-align: center;
+    @include font(400, 10px, 12px)
+}
+

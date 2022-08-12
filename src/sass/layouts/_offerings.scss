@@ -1,0 +1,93 @@
+.offerings {
+  padding-top: 41px;
+
+  background-image: url(../images/order-mob-img/bg-mob-top.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.offerings__thumb {
+  width: 280px;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+.offerings__title {
+  margin-bottom: 28px;
+}
+
+.offerings__subtitle {
+  @include font(400, 14px, 16px);
+  margin-bottom: 28px;
+}
+
+.offerings__item {
+  margin-bottom: 28px;
+}
+
+.item-offerings__title {
+  @include font(700, 18px, 21px);
+  margin-bottom: 16px;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+
+    background-color: var(--white-main-color);
+    border-radius: 50%;
+    background-image: url(../images/oferring-graphic/rocket.svg);
+    background-size: 32px 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.item-offerings__title_touch::before {
+  background-image: url(../images/oferring-graphic/touch.svg);
+}
+
+.item-offerings__description {
+  @include font(400, 14px, 16px);
+}
+
+.offerings__button {
+  width: 130px;
+  height: 40px;
+
+  @include font(400, 13.7px, 20px);
+
+  background: var(--white-main-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 30px;
+  margin-right: 20px;
+
+  &:hover,
+  &:focus {
+    border: 2px solid #597d00;
+  }
+}
+
+.offerings__link {
+  color: #000;
+
+  &::after {
+    content: '';
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    fill: #000;
+
+    vertical-align: middle;
+    background-image: url(../images/oferring-graphic/Chevron-Down.svg);
+  }
+
+  &:hover,
+  &:focus {
+    color: #597d00;
+  }
+}
