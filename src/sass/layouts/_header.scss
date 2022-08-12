@@ -41,6 +41,12 @@
 
 .navigation-menu__link{
     @include font (400, 14px, 16px);
+    color: var(--primary-text-color);
+    transition: color var(--timing-function);
+    &:hover,
+    &:focus{
+        color: var(--accent-color);
+    }
 }
 .page-header__order-btn{
    display: flex;
