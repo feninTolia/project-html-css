@@ -1,0 +1,59 @@
+.modal {
+  @include for-phone-only {
+    width: 90%;
+    height: 90%;
+  }
+
+  @media screen and (min-width: 768px) and (max-height: 850px) {
+    width: 450px;
+    height: 90%;
+  }
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
+  padding: 40px;
+
+  transform: translate(-50%, -50%) scale(1);
+
+  overflow: auto;
+  background-color: #fff;
+  box-shadow: 5px 5px 15px 5px #ff8080, -9px 5px 15px 5px #ffe488,
+    -7px -5px 15px 5px #8cff85, 12px -5px 15px 5px #80c7ff,
+    12px 10px 15px 7px #e488ff, -10px 10px 15px 7px #ff616b,
+    -10px -7px 27px 1px #8e5cff, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+
+  border-radius: 30px;
+
+  transition: transform var(--timing-function);
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+  padding: 0;
+
+  background-color: #ff605c;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  cursor: pointer;
+
+  transition: background-color var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: #f98684;
+  }
+}
