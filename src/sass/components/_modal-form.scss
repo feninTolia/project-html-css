@@ -6,6 +6,11 @@
   text-align: center;
 
   color: var(--primary-text-color);
+
+  &.shipping {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
 }
 
 .callback-form__item {
