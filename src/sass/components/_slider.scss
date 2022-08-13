@@ -1,0 +1,127 @@
+.slick-prev,
+.slick-next {
+    position: absolute;
+    background-color:#FFFFFF;
+    width: 34px;
+    height: 28px;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: 0px 4px 4px 0px #0000000F;
+    cursor: pointer;
+    transition: box-shadow var(--timing-function);
+
+    @include for-desktop-up {
+        border-radius: 8px;
+        width: 48px;
+        height: 40px;
+    }
+
+}
+
+
+.slider-svg {
+    fill: var(--primary-text-color);
+    transition: fill var(--timing-function);
+
+    @include for-desktop-up {
+        width: 16px;
+        height: 30px;
+    }
+
+
+}
+
+
+@include for-tablet-up {
+    .slick-prev:active,
+    .slick-next:active {
+        box-shadow: 0px 4px 4px 0px #00000029;
+    }
+}
+
+
+@include for-desktop-up {
+
+    .slick-prev:hover .slider-svg,
+    .slick-prev:focus .slider-svg,
+    .slick-next:hover .slider-svg,
+    .slick-next:focus .slider-svg {
+        fill: var(--accent-color);
+    }
+
+    .slick-prev:active .slider-svg,
+    .slick-prev:active .slider-svg,
+    .slick-next:active .slider-svg,
+    .slick-next:active .slider-svg {
+         fill: var(--primary-text-color);
+    }
+ 
+}
+
+
+
+.slick-prev {
+    top: 50%;
+    left: -12px;
+
+
+    @include for-desktop-up {
+        top: 50%;
+        left: -13px;
+    }
+}
+
+
+.slick-next {
+    top: 50%;
+    right: -12px;
+
+
+    @include for-desktop-up {
+        top: 50%;
+        left: 539px;
+    }
+
+}
+
+
+
+.hero__slider {
+    @include for-phone-only  {
+        display: none;
+    }
+
+    @include for-tablet-up {
+        overflow: hidden;
+        position: static;
+        width: 320px;
+        border-radius: 50%;
+        border: 14px solid var(--yellow-main-color);
+    }
+
+    @include for-desktop-up {
+        position: static;
+        width: 580px;
+        border: 26px solid var(--yellow-main-color);
+    }
+}
+
+
+.hero__slader-wrapper {
+
+
+    @include for-tablet-up {
+       position: relative;
+       bottom: 59px;
+       width: 320px;
+       margin-left: 40px;
+    }
+
+    @include for-desktop-up {
+        position: relative;
+        bottom: 0;
+        margin-left: 133px;
+        width: 580px;
+    }
+    
+}
