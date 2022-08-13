@@ -1,0 +1,114 @@
+<!-- modal  -->
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button data-modal-close class="modal__close-btn"></button>
+
+    <!-- callback-form -->
+    <form name="callback-form" class="callback-form">
+      <b class="callback-form__title">Select your plan</b>
+
+      <div class="callback-form__item">
+        <label class="callback-form__label" for="meal-kit"
+          >Select Meal Kit</label
+        >
+        <select class="callback-form__input" id="meal-kit" name="meal-kit">
+          <option value="1">&#129385; &#129382; Meat & Veggie</option>
+          <option value="2" selected>&#129367; Veggie</option>
+          <option value="3">&#128107; Family Friendly</option>
+          <option value="4">&#11088; Premium</option>
+          <option value="5">&#128293; Spicy</option>
+        </select>
+      </div>
+
+      <b class="callback-form__title shipping">Shipping information</b>
+
+      <div class="callback-form__item">
+        <label class="callback-form__label" for="username">Name</label>
+        <input
+          class="callback-form__input"
+          type="text"
+          name="username"
+          id="username"
+          required
+          minlength="2"
+          pattern="^[a-zA-zа-яА-яіІїЇЇ]+$"
+        />
+      </div>
+
+      <div class="callback-form__item">
+        <label class="callback-form__label" for="tel">Phone</label>
+        <input
+          class="callback-form__input"
+          type="tel"
+          name="tel"
+          id="tel"
+          required
+          pattern="^[0-9]{10}"
+          title="0xxxxxxxxx"
+        />
+      </div>
+
+      <div class="callback-form__item">
+        <label class="callback-form__label" for="mail">E-mail</label>
+        <input
+          class="callback-form__input"
+          type="email"
+          name="mail"
+          id="mail"
+          required
+        />
+      </div>
+
+      <div class="callback-form__item">
+        <label class="callback-form__label" for="address">Address</label>
+        <input
+          class="callback-form__input"
+          type="text"
+          name="username"
+          id="adderess"
+          required
+          minlength="2"
+        />
+      </div>
+
+      <div class="callback-form__item">
+        <label class="callback-form__label" for="comment">Comment</label>
+        <textarea
+          class="callback-form__input callback-form__textarea"
+          name="comment"
+          id="comment"
+          rows="2"
+          placeholder="Food intolerances, allergies"
+        ></textarea>
+      </div>
+
+      <div class="radio__wrap">
+        <label class="radio-payment__item">
+          <input type="radio" name="payment" value="PayPal" />
+          PayPal
+        </label>
+        <label class="radio-payment__item">
+          <input type="radio" name="payment" value="credit-card" checked />
+          Credit card
+        </label>
+      </div>
+
+      <div class="callback-form__item policy-checkbox">
+        <input
+          class="policy-checkbox__input"
+          id="policy"
+          type="checkbox"
+          name="policy"
+          value="policy"
+          required
+        />
+        <label class="callback-form__label policy-checkbox__label" for="policy">
+          I agree to the newsletter and accept the terms of the
+          <a class="policy-checkbox__link" href="#"> agreement.</a>
+        </label>
+      </div>
+
+      <button class="modal__button" type="submit">Submit</button>
+    </form>
+  </div>
+</div>
