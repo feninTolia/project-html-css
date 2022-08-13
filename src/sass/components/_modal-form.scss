@@ -1,0 +1,135 @@
+.callback-form__title {
+  display: inline-block;
+  margin-bottom: 22px;
+
+  @include font(700, 25px, 35px);
+  text-align: center;
+
+  color: var(--primary-text-color);
+
+  &.shipping {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.callback-form__item {
+  position: relative;
+
+  margin-bottom: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.callback-form__label {
+  width: 100%;
+  margin-bottom: 4px;
+
+  @include font(400, 16px, 24px);
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
+}
+
+.callback-form__input {
+  width: 100%;
+  padding: 12px 16px 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 30px;
+
+  transition: border-color var(--timing-function);
+
+  &:focus {
+    border-color: var(--accent-color);
+    outline: transparent;
+  }
+}
+
+.callback-form__textarea {
+  resize: none;
+  padding-left: 16px;
+
+  &::placeholder {
+    @include font(null, 14px, 16px);
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.radio__wrap {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  margin-top: 25px;
+}
+
+.radio-payment__item {
+  display: inline-block;
+  width: calc((100% - 20px) / 2);
+  padding: 15px;
+  text-align: center;
+
+  background-color: var(--yellow-main-color);
+  border-radius: 30px;
+}
+
+.policy-checkbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.policy-checkbox__label {
+  margin: 10px;
+  padding-left: 5px;
+
+  @include font(null, 12px, 14px);
+  color: var(--primary-text-color);
+
+  @media screen and (max-width: 467px) {
+    display: inline;
+  }
+
+  @include for-desktop-up {
+    @include font(null, 14px, 24px);
+  }
+}
+
+.policy-checkbox__link {
+  padding-left: 3px;
+  color: var(--accent-color);
+  @include font(400, 12px, 14px);
+  text-decoration: none;
+
+  transition: color var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--primary-text-color);
+  }
+
+  @include for-desktop-up {
+    @include font(null, 14px, 24px);
+  }
+}
+
+.modal__button {
+  display: flex;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 8px 16px;
+
+  @include font(400, 16px, 24px);
+  border-radius: 30px;
+  border: transparent;
+
+  background-color: var(--green-background);
+
+  &:hover {
+    background-color: #b5ff00;
+  }
+}

@@ -1,0 +1,143 @@
+.subscribe__box {
+  display: block;
+}
+
+.subscribe__img {
+  width: 160px;
+  height: 78px;
+
+  margin-top: -106px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 16px;
+
+  @include for-phone-up {
+    width: 220px;
+    height: auto;
+  }
+
+  @include for-tablet-up {
+    width: 280px;
+    height: 136px;
+
+    margin-top: -190px;
+    margin-right: auto;
+    margin-left: 424px;
+    margin-bottom: 20px;
+  }
+
+  @include for-desktop-up {
+    width: 540px;
+    height: 260px;
+    margin-top: -166px;
+    margin-right: 0;
+    margin-left: auto;
+    margin-bottom: -184px;
+  }
+}
+
+.subscribe__title {
+  @include font(700, 28px, 34px);
+
+  margin-bottom: 20px;
+  width: 100%;
+
+  color: var(--primary-text-color);
+
+  @include for-tablet-up {
+    @include font(700, 42px, 50px);
+
+    @include for-desktop-up {
+      width: 630px;
+    }
+  }
+}
+
+.subscribe__text {
+  @include font(400, 14px, 16px);
+
+  margin-bottom: 40px;
+
+  color: var(--primary-text-color);
+
+  @include for-tablet-up {
+    @include font(400, 16px, 24px);
+  }
+
+  @include for-desktop-up {
+    width: 630px;
+    margin-bottom: 24px;
+  }
+}
+
+.subscribe__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  @include for-tablet-up {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.subscribe__email {
+  @include font(400, 12px, 18px);
+
+  outline: transparent;
+  width: 100%;
+  height: 42px;
+  margin-bottom: 30px;
+  padding: 12px;
+
+  border: 0.854167px solid var(--yellow-main-color);
+  border-radius: 30px;
+
+  &:focus {
+    outline: transparent;
+    caret-color: #505050;
+    color: var(--primary-text-color);
+  }
+
+  &:invalid {
+    border-color: #ff705d;
+  }
+
+  &:valid {
+    border-color: var(--accent-color);
+  }
+
+  @include for-tablet-up {
+    width: 400px;
+    margin: 0;
+  }
+}
+
+.subscribe__email:placeholder-shown {
+  border-color: var(--yellow-main-color);
+}
+
+.subscribe__button {
+  @include font(400, 14px, 21px);
+  padding: 10px 30px;
+  border: none;
+
+  background: var(--green-background);
+
+  border-radius: 30px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: var(--green-background);
+    transition: background-color var(--timing-function);
+  }
+
+  @include for-tablet-up {
+    margin-left: 20px;
+  }
+
+  @include for-desktop-up {
+    margin-left: 32px;
+  }
+}

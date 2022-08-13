@@ -1,11 +1,56 @@
-<section class="section offerings">
+<section id="offerings" class="section offerings">
   <div class="container offerings__container">
     <div class="offerings__thumb">
-      <img
-        class="offerings__img"
-        src="./images/order-mob-img/aple-mob.png"
-        alt="apple"
-      />
+      <picture>
+        <source
+          srcset="
+            ./images/oferring-graphic/apple-desk.webp    1x,
+            ./images/oferring-graphic/apple-desk@2x.webp 2x
+          "
+          media="(min-width:1280px)"
+          type="image/webp"
+        />
+        <source
+          srcset="
+            ./images/oferring-graphic/apple-desk.png    1x,
+            ./images/oferring-graphic/apple-desk@2x.png 2x
+          "
+          media="(min-width:1280px)"
+        />
+        <source
+          srcset="
+            ./images/oferring-graphic/apple-tab.webp    1x,
+            ./images/oferring-graphic/apple-tab@2x.webp 2x
+          "
+          media="(min-width:768px)"
+          type="image/webp"
+        />
+        <source
+          srcset="
+            ./images/oferring-graphic/apple-tab.png    1x,
+            ./images/oferring-graphic/apple-tab@2x.png 2x
+          "
+          media="(min-width:768px)"
+        />
+        <source
+          srcset="
+            ./images/order-mob-img/aple-mob.webp    1x,
+            ./images/order-mob-img/aple-mob@x2.webp 2x
+          "
+          type="image/webp"
+        />
+        <source
+          srcset="
+            ./images/order-mob-img/aple-mob.png    1x,
+            ./images/order-mob-img/aple-mob@x2.png 2x
+          "
+        />
+        <img
+          class="offerings__img"
+          src="./images/order-mob-img/aple-mob.png"
+          alt="apple"
+        />
+      </picture>
     </div>
 
     <div class="offerings__wrapper">
@@ -35,7 +80,9 @@
         </li>
       </ul>
 
-      <button class="offerings__button" type="button">Order Now</button>
+      <button class="offerings__button" type="button" data-modal-open2>
+        Order Now
+      </button>
       <a class="offerings__link link" href="#">Read More</a>
     </div>
   </div>

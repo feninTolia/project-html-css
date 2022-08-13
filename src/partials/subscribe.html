@@ -1,12 +1,54 @@
-<section class="section subscribe">
+<section class="section subscribe" id="subscribe">
   <div class="container subscribe__box">
-    <img
-      width=""
-      height=""
-      class="subscribe__img"
-      src="./images/order-mob-img/banan-mob@x2.png"
-      alt="banan"
-    />
+    <picture>
+      <source
+        srcset="
+          ./images/order-desc-img/banan-desc.webp    1x,
+          ./images/order-desc-img/banan-desc@x2.webp 2x
+        "
+        type="image/webp"
+        media="(min-width: 1280px)"
+      />
+
+      <source
+        srcset="
+          ./images/order-desc-img/banan-desc.png    1x,
+          ./images/order-desc-img/banan-desc@x2.png 2x
+        "
+        media="(min-width: 1280px)"
+      />
+      <source
+        srcset="
+          ./images/order-tab-img/banan-tab.png    1x,
+          ./images/order-tab-img/banan-tab@x2.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+
+      <source
+        srcset="
+          ./images/order-mob-img/banan-mob.webp    1x,
+          ./images/order-mob-img/banan-mob@x2.webp 2x
+        "
+        type="image/webp"
+        media="(min-width: 480px)"
+      />
+      <source
+        srcset="
+          ./images/order-mob-img/banan-mob.png    1x,
+          ./images/order-mob-img/banan-mob@x2.png 2x
+        "
+        media="(max-width: 480px)"
+      />
+
+      <img
+        width="100%"
+        height=""
+        class="subscribe__img"
+        src="./images/order-mob-img/banan-mob.png"
+        alt="banan"
+      />
+    </picture>
     <h2 class="subscribe__title">Subscribe To Get Special Offers</h2>
     <p class="subscribe__text">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse

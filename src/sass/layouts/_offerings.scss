@@ -5,6 +5,30 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
+
+  @include for-tablet-up {
+    background-image: url(../images/oferring-graphic/offer-bg-tab.svg);
+    margin-top: -33px;
+  }
+
+  @include for-desktop-up {
+    background-image: url(../images/oferring-graphic/bg-desk-xxl.svg);
+    margin-top: -146px;
+  }
+
+  @media screen and(min-width:1700px) {
+    background-image: url(../images/oferring-graphic/bg-desk-blob-7.svg);
+    background-position: bottom;
+    background-size: auto 90%;
+  }
+}
+
+.offerings__container {
+  @include for-desktop-up {
+    display: flex;
+    align-items: flex-end;
+    gap: 90px;
+  }
 }
 
 .offerings__thumb {
@@ -12,19 +36,67 @@
   display: block;
   margin: 0 auto;
   padding-bottom: 60px;
+
+  @include for-tablet-up {
+    width: 704px;
+    padding-top: 100px;
+  }
+
+  @include for-desktop-up {
+    width: 550px;
+    margin: 0 0 -24px;
+    padding-bottom: 0;
+  }
 }
 
 .offerings__title {
   margin-bottom: 28px;
+
+  @include for-tablet-up {
+    width: 526px;
+  }
 }
 
 .offerings__subtitle {
   @include font(400, 14px, 16px);
   margin-bottom: 28px;
+
+  @include for-tablet-up {
+    width: 500px;
+
+    @include font(400, 16px, 19px);
+  }
+
+  @include for-desktop-up {
+    @include font(400, 15.4px, 23px);
+    margin-bottom: 40px;
+  }
+}
+
+.offerings__list {
+  @include for-tablet-up {
+    display: flex;
+    gap: 116px;
+  }
+
+  @include for-desktop-up {
+    gap: 67px;
+    width: 600px;
+  }
 }
 
 .offerings__item {
   margin-bottom: 28px;
+
+  @include for-tablet-up {
+    flex-basis: calc((100% - 200px) / 2);
+    margin-bottom: 40px;
+  }
+
+  @include for-desktop-up {
+    flex-basis: calc((100% - 67px) / 2);
+    margin-bottom: 34px;
+  }
 }
 
 .item-offerings__title {
@@ -53,6 +125,10 @@
 
 .item-offerings__description {
   @include font(400, 14px, 16px);
+
+  @include for-desktop-up {
+    @include font(400, 13.6px, 20px);
+  }
 }
 
 .offerings__button {
