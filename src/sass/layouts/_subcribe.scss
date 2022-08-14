@@ -84,27 +84,26 @@
 .subscribe__email {
   @include font(400, 12px, 18px);
 
-  outline: transparent;
   width: 100%;
   height: 42px;
   margin-bottom: 30px;
   padding: 12px;
 
-  border: 0.854167px solid var(--yellow-main-color);
+  border: 1px solid var(--yellow-main-color);
   border-radius: 30px;
 
   &:focus {
-    outline: transparent;
-    caret-color: #505050;
-    color: var(--primary-text-color);
+    outline: 1px solid #7eb101;
+    outline-offset: -2px;
   }
-
+  &:valid {
+    border-color: #7eb101;
+    outline-width: 1px;
+  }
   &:invalid {
     border-color: #ff705d;
-  }
-
-  &:valid {
-    border-color: var(--accent-color);
+    outline: 1px solid #ff705d;
+    outline-offset: -2px;
   }
 
   @include for-tablet-up {
@@ -120,17 +119,17 @@
 .subscribe__button {
   @include font(400, 14px, 21px);
   padding: 10px 30px;
+
   border: none;
-
-  background: var(--green-background);
-
+  background-color: var(--green-background);
   border-radius: 30px;
+
+  transition: background-color var(--timing-function);
 
   &:hover,
   &:focus,
   &:active {
-    background: var(--green-background);
-    transition: background-color var(--timing-function);
+    background-color: #b5ff00;
   }
 
   @include for-tablet-up {
