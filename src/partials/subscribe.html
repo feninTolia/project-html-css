@@ -42,8 +42,6 @@
       />
 
       <img
-        width="100%"
-        height=""
         class="subscribe__img"
         src="./images/order-mob-img/banan-mob.png"
         alt="banan"
@@ -54,7 +52,7 @@
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
       varius enim in eros elementum tristique.
     </p>
-    <form class="subscribe__form" method="post">
+    <form class="subscribe__form">
       <label class="visually-hidden" for="subscribe-email"></label>
       <input
         class="subscribe__email"
@@ -62,9 +60,9 @@
         name="subscribe-email"
         id="subscribe-email"
         placeholder="Enter your email"
-        required
+        minlength="2"
       />
-      <button class="subscribe__button" type="submit">Sign Up</button>
+      <button type="submit" class="subscribe__button">Sign Up</button>
     </form>
   </div>
 </section>
