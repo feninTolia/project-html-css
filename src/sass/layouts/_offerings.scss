@@ -74,28 +74,34 @@
 }
 
 .offerings__list {
+  margin-bottom: 28px;
+
   @include for-tablet-up {
     display: flex;
     gap: 116px;
+    margin-bottom: 40px;
   }
 
   @include for-desktop-up {
     gap: 67px;
     width: 600px;
+    margin-bottom: 34px;
   }
 }
 
 .offerings__item {
-  margin-bottom: 28px;
+  @include for-phone-only {
+    &:not(:last-child) {
+      margin-bottom: 28px;
+    }
+  }
 
   @include for-tablet-up {
     flex-basis: calc((100% - 200px) / 2);
-    margin-bottom: 40px;
   }
 
   @include for-desktop-up {
     flex-basis: calc((100% - 67px) / 2);
-    margin-bottom: 34px;
   }
 }
 
